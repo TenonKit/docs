@@ -1,0 +1,37 @@
+export const meta = {
+  group: "Reference",
+  title: "Keyboard shortcuts",
+  description: "Every shortcut in the editor.",
+};
+
+export const shortcuts = [
+  ["Undo", "Ctrl Z"],
+  ["Redo", "Ctrl Shift Z"],
+  ["Duplicate the selected component", "Ctrl D"],
+  ["Delete the selected component", "Del"],
+  ["Save now", "Ctrl S"],
+  ["Deselect, close menus", "Esc"],
+  ["Indent code", "Tab"],
+  ["Open settings", "Ctrl ,"],
+];
+
+<table className="w-full text-left">
+  <thead>
+    <tr className="border-b border-white/10 text-[14px] text-muted">
+      <th className="py-2 font-medium">Action</th>
+      <th className="py-2 text-right font-medium">Keys</th>
+    </tr>
+  </thead>
+  <tbody>
+    {shortcuts.map(([what, keys]) => (
+      <tr key={what} className="border-b border-white/[0.06] last:border-b-0">
+        <td className="py-3 pr-4">{what}</td>
+        <td className="py-3 text-right whitespace-nowrap">
+          {keys.split(" ").map((k) => <kbd key={k} className="ml-1">{k}</kbd>)}
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+On a Mac, use Cmd instead of Ctrl.

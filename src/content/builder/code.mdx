@@ -1,0 +1,30 @@
+export const meta = {
+  group: "Build",
+  title: "HTML, React and CSS",
+  description: "Every component’s code is one tab away.",
+};
+
+HTML components show their markup; React components show **JSX**. The page re-renders as you type.
+
+## React components
+
+A React component exports itself as the default and can import from `react` only:
+
+```Counter.jsx
+import { useState } from 'react'
+
+export default function Counter() {
+  const [n, setN] = useState(0)
+  return <button onClick={() => setN(n + 1)}>Clicked {n} times</button>
+}
+```
+
+<Callout>
+  On the canvas, components appear as they first render. To click through state, effects and events, open the live **React app** preview.
+</Callout>
+
+<Figure src="code-dark.png" alt="A React component's JSX next to its render on the canvas" />
+
+## Scoped CSS
+
+The CSS tab only affects that one component, so its styles never leak into others.

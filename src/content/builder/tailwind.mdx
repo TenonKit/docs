@@ -1,0 +1,18 @@
+export const meta = {
+  group: "Build",
+  title: "Tailwind CSS",
+  description: "Tailwind v4 classes, compiled as you type.",
+};
+
+Tailwind CSS v4 is on when the page CSS starts with `@import "tailwindcss"`, which new projects do unless you untick it. Classes are compiled as you type, in HTML and in JSX.
+
+## Your own colours
+
+Colour tokens become classes too. This page CSS gives you `bg-brand` and `text-ink`:
+
+<Code title="Page CSS">{`:root { --brand: #1b6c80; --ink: #16181d; }
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-ink: var(--ink);
+}`}</Code>
